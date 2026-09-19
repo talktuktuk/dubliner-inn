@@ -2222,7 +2222,15 @@ function restartQuiz() {
   document.getElementById('quiz-score').style.display = 'none';
   startQuiz();
 }
+function openTalkTukTuk() {
+  document.getElementById('manor-home').style.display = 'none';
 
+  document.querySelector('.app').style.display = 'block';
+
+  showMain('phrases');
+
+  window.scrollTo(0, 0);
+}
 function openManorSection(section) {
   document.getElementById('manor-home').style.display = 'none';
 
@@ -2261,7 +2269,7 @@ function closeManorSection() {
 
   var info = document.getElementById('manor-info');
   if (info) info.style.display = 'none';
-
+document.querySelector('.app').style.display = 'none';
   document.getElementById('manor-home').style.display = 'flex';
   window.scrollTo(0, 0);
 }
